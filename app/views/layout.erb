@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/css/vendor/jquery-ui.css">
-  <link rel="stylesheet" href="/css/vendor/jquery-ui.structure.css">
-  <link rel="stylesheet" href="/css/vendor/jquery.timepicker.css">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/application.css">
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/fonticons.css">
+  <link rel="stylesheet" href="/css/plugins.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/style.css">
 
-  <script src="/js/vendor/jquery-2.2.3.min.js"></script>
-  <script src="/js/vendor/jquery-ui.js"></script>
-  <script src="/js/vendor/jquery.timepicker.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title>Events!</title>
+  <title></title>
 </head>
 <body>
-  <div class="bg-white teal">
-    <%= erb :_header %>
-  </div>
-
-  <div class="flex-fill bg-blue white">
-    <%= yield %>
-  </div>
+<!--   <ul>
+    <% if logged_in %>
+    <li> <a href="/users/<%=current_user.id %>"><%= "#{current_user.name}" %></a></li>
+    <li><a href="/logout">Logout</a></li>
+    <li><a href="/">Home</a></li>
+  <% else %>
+    <li> <a href="/login">Login</a></li>
+    <li> <a href="/users/new">Register</a></li>
+    <% end %>
+  </ul> -->
+  <%= yield %>
 </body>
-</html>
